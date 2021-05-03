@@ -90,8 +90,8 @@ class PushlyFirebaseListener {
    * To make a network call and store messages in database
    */
   saveUserAction(actionText, result) {
-    this.pushObj.action = actionText;
-    this.pushObj.userAction = result;
+    this.pushObj.action = result;
+    this.pushObj.user_action = actionText;
     var messagelog = this.pushObj;
     fetch(
       `https://my.${this.pushObj.region}.500apps.com/pcors?url=https://push.${this.pushObj.region}.500apps.com/push/v1/message/log?app_name=push`,
@@ -111,4 +111,3 @@ class PushlyFirebaseListener {
   var _pushlyFirebaseListener = new PushlyFirebaseListener();
   _pushlyFirebaseListener.init();
 })();
-  
