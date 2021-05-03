@@ -80,7 +80,7 @@ class PushlyFirebaseListener {
       // Redirect to website which is given by subscriber
       if (this.launchUrl) clients.openWindow(this.launchUrl);
       const clickedNotification = event.notification;
-      if (this.message_id) this.saveUserAction(event.action ? (event.action, "success") : ("executed", "success"));
+      if (this.message_id) this.saveUserAction(event.action ? event.action : "executed", "success");
       // Reset variable
       this.exeMessageApi = "";
     });
