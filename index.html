@@ -198,21 +198,27 @@ var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(glc
 
  <script>
       !(function (n, i, a, t, e, o) {
-        (o = i.getElementsByTagName("head")[0]),
-          ((e = i.createElement("script")).async = 1),
-          (e.id = "pace"),
-          (e.crossorigin = "anonymous"),
+        (o = i.getElementsByTagName('head')[0]),
+          ((e = i.createElement('script')).async = 1),
+          (e.id = 'pace'),
+          (e.crossorigin = 'anonymous'),
           (e.src = a + t),
           (e.onload = function () {
             new TrackPerformance({
-              applicationId: "XFwGRSCYiM",
-              env: "dev",
-              paceEnv: "Prod",
+              applicationId: 'tOzm6mHBfl',
+              env: 'staging',
+              secretKey:
+                'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIiLCJjdXN0b21lcklkIjoiMjE3OSIsImlhdCI6MTcwODYwNTY1MywiZXhwIjoxNzQwMTQxNjUzfQ.C4BXdeTiL6nie0zaDcm813YHpNAMcUB-uvVbK0cb6og',
               includeHosts: [window.location.host],
             });
           }),
           o.appendChild(e);
-      })(window, document, "https://satyanagendra-58.github.io/", "rum-client.min.js");
+      })(
+        window,
+        document,
+        'https://satyanagendra-58.github.io/',
+        'rum-client.min.js',
+      );
     </script>
 
 
